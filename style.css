@@ -1,0 +1,68 @@
+/* Fond dégradé animé */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4facfe);
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Navigation */
+nav {
+  margin: 20px 0;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+  color: #ff6ec4;
+  transform: scale(1.1);
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: #fff;
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #ff6ec4;
+  color: white;
+  transform: scale(1.1);
+}
+.btn.discord {
+  background: #5865F2;
+  color: white;
+}
+.btn.discord:hover {
+  background: #404EED;
+}
+
+/* Curseur papillon animé */
+.cursor {
+  width: 40px;
+  height: 40px;
+  background: url('papillon.png') no-repeat center/contain;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
